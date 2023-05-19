@@ -11,6 +11,17 @@ django = "^4.2.1"
 pillow = "^9.5.0"
 
 
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+ruff = "^0.0.269"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.black]
+color = true
+line-length = 120
