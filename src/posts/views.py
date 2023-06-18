@@ -11,7 +11,12 @@ from .models import Post
 class PostsView(View):
     def get(self, request: HttpRequest):
         posts = Post.objects.all()
-        post = Post(name="John", description="Python django", content="flsdfj;as;fasdfsfjjsdflsdjfds", published_date=datetime.now())
+        post = Post(
+            name="John",
+            description="Python django",
+            content="flsdfj;as;fasdfsfjjsdflsdjfds",
+            published_date=datetime.now(),
+        )
         post.save()
         context_data = {"posts": posts}
         template = loader.get_template("posts.html")

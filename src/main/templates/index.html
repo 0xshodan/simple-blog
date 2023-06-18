@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block head %}
+{% extends "base.html" %} {% load static %} {% block head %}
 <title>Блог Артёма</title>
 {% endblock %} {% block content %}
 <div id="main">
@@ -8,23 +8,17 @@
       <div class="col-md-3">
         <div class="about-fixed">
           <div class="my-pic">
-            <img src="images/pic/my-pic.png" alt="" />
-            <a
-              href="javascript:void(0)"
-              class="collapsed"
-              data-target="#menu"
-              data-toggle="collapse"
-              ><i class="icon-menu menu"></i
-            ></a>
+            <img src="{% static 'index/images/pic/my-pic.png' %}" alt="" />
+            <a href="javascript:void(0)" class="collapsed" data-target="#menu" data-toggle="collapse"><i
+                class="icon-menu menu"></i></a>
             <div id="menu" class="collapse">
               <ul class="menu-link">
-                <li><a href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="{% url 'work' %}">Work</a></li>
+                <li><a href="/contact/">Contact</a></li>
               </ul>
             </div>
           </div>
-
           <div class="my-detail">
             <div class="white-spacing">
               <h1>Alex Parker</h1>
@@ -33,24 +27,16 @@
 
             <ul class="social-icon">
               <li>
-                <a href="#" target="_blank" class="facebook"
-                  ><i class="fa fa-facebook"></i
-                ></a>
+                <a href="#" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
               </li>
               <li>
-                <a href="#" target="_blank" class="twitter"
-                  ><i class="fa fa-twitter"></i
-                ></a>
+                <a href="#" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a>
               </li>
               <li>
-                <a href="#" target="_blank" class="linkedin"
-                  ><i class="fa fa-linkedin"></i
-                ></a>
+                <a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a>
               </li>
               <li>
-                <a href="#" target="_blank" class="github"
-                  ><i class="fa fa-github"></i
-                ></a>
+                <a href="#" target="_blank" class="github"><i class="fa fa-github"></i></a>
               </li>
             </ul>
           </div>
@@ -71,18 +57,16 @@
               <!-- Blog Post Start -->
               <div class="col-md-12 blog-post">
                 <div class="post-title">
-                  <a href="single.html"
-                    ><h1>
+                  <a href="single.html">
+                    <h1>
                       How to make your company website based on bootstrap
                       framework on localhost?
-                    </h1></a
-                  >
+                    </h1>
+                  </a>
                 </div>
                 <div class="post-info">
-                  <span
-                    >November 23, 2016 / by
-                    <a href="#" target="_blank">Alex Parker</a></span
-                  >
+                  <span>November 23, 2016 / by
+                    <a href="#" target="_blank">Alex Parker</a></span>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -92,29 +76,24 @@
                   ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
                   ut ratione similique.
                 </p>
-                <a
-                  href="single.html"
-                  class="button button-style button-anim fa fa-long-arrow-right"
-                  ><span>Read More</span></a
-                >
+                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right"><span>Read
+                    More</span></a>
               </div>
               <!-- Blog Post End -->
 
               <!-- Blog Post Start -->
               <div class="col-md-12 blog-post">
                 <div class="post-title">
-                  <a href="single.html"
-                    ><h1>
+                  <a href="single.html">
+                    <h1>
                       How to design elegant e-mail newsletter in html for wish
                       christmas to your subscribers?
-                    </h1></a
-                  >
+                    </h1>
+                  </a>
                 </div>
                 <div class="post-info">
-                  <span
-                    >November 23, 2016 / by
-                    <a href="#" target="_blank">Alex Parker</a></span
-                  >
+                  <span>November 23, 2016 / by
+                    <a href="#" target="_blank">Alex Parker</a></span>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -124,32 +103,27 @@
                   ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
                   ut ratione similique.
                 </p>
-                <a
-                  href="single.html"
-                  class="button button-style button-anim fa fa-long-arrow-right"
-                  ><span>Read More</span></a
-                >
+                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right"><span>Read
+                    More</span></a>
               </div>
               <!-- Blog Post End -->
 
               <!-- Blog Post Start -->
               <div class="col-md-12 blog-post">
                 <div class="post-image">
-                  <img src="images/blog/1.jpg" alt="" />
+                  <img src="{% static 'index/images/blog/1.jpg' %}" alt="" />
                 </div>
                 <div class="post-title">
-                  <a href="single.html"
-                    ><h1>
+                  <a href="single.html">
+                    <h1>
                       Make mailchimp singup form working with ajax using jquery
                       plugin
-                    </h1></a
-                  >
+                    </h1>
+                  </a>
                 </div>
                 <div class="post-info">
-                  <span
-                    >November 23, 2016 / by
-                    <a href="#" target="_blank">Alex Parker</a></span
-                  >
+                  <span>November 23, 2016 / by
+                    <a href="#" target="_blank">Alex Parker</a></span>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -159,29 +133,24 @@
                   ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
                   ut ratione similique.
                 </p>
-                <a
-                  href="single.html"
-                  class="button button-style button-anim fa fa-long-arrow-right"
-                  ><span>Read More</span></a
-                >
+                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right"><span>Read
+                    More</span></a>
               </div>
               <!-- Blog Post End -->
 
               <!-- Blog Post Start -->
               <div class="col-md-12 blog-post">
                 <div class="post-title">
-                  <a href="single.html"
-                    ><h1>
+                  <a href="single.html">
+                    <h1>
                       Develop a custom wordpress membership plugin from scratch
                       using framework on localhost - part 1
-                    </h1></a
-                  >
+                    </h1>
+                  </a>
                 </div>
                 <div class="post-info">
-                  <span
-                    >November 23, 2016 / by
-                    <a href="#" target="_blank">Alex Parker</a></span
-                  >
+                  <span>November 23, 2016 / by
+                    <a href="#" target="_blank">Alex Parker</a></span>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -191,29 +160,24 @@
                   ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
                   ut ratione similique.
                 </p>
-                <a
-                  href="single.html"
-                  class="button button-style button-anim fa fa-long-arrow-right"
-                  ><span>Read More</span></a
-                >
+                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right"><span>Read
+                    More</span></a>
               </div>
               <!-- Blog Post End -->
 
               <!-- Blog Post Start -->
               <div class="col-md-12 blog-post">
                 <div class="post-title">
-                  <a href="single.html"
-                    ><h1>
+                  <a href="single.html">
+                    <h1>
                       How to customize a wordpress theme entirely from scratch
                       using a child theme?
-                    </h1></a
-                  >
+                    </h1>
+                  </a>
                 </div>
                 <div class="post-info">
-                  <span
-                    >November 23, 2016 / by
-                    <a href="#" target="_blank">Alex Parker</a></span
-                  >
+                  <span>November 23, 2016 / by
+                    <a href="#" target="_blank">Alex Parker</a></span>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -223,32 +187,27 @@
                   ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
                   ut ratione similique.
                 </p>
-                <a
-                  href="single.html"
-                  class="button button-style button-anim fa fa-long-arrow-right"
-                  ><span>Read More</span></a
-                >
+                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right"><span>Read
+                    More</span></a>
               </div>
               <!-- Blog Post End -->
 
               <!-- Blog Post Start -->
               <div class="col-md-12 blog-post">
                 <div class="post-image">
-                  <img src="images/blog/2.jpg" alt="" />
+                  <img src="{% static 'index/images/blog/2.jpg' %}" alt="" />
                 </div>
                 <div class="post-title">
-                  <a href="single.html"
-                    ><h1>
+                  <a href="single.html">
+                    <h1>
                       What makes wordpress a unique and highly customizable
                       platform from competitors?
-                    </h1></a
-                  >
+                    </h1>
+                  </a>
                 </div>
                 <div class="post-info">
-                  <span
-                    >November 23, 2016 / by
-                    <a href="#" target="_blank">Alex Parker</a></span
-                  >
+                  <span>November 23, 2016 / by
+                    <a href="#" target="_blank">Alex Parker</a></span>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -258,29 +217,24 @@
                   ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
                   ut ratione similique.
                 </p>
-                <a
-                  href="single.html"
-                  class="button button-style button-anim fa fa-long-arrow-right"
-                  ><span>Read More</span></a
-                >
+                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right"><span>Read
+                    More</span></a>
               </div>
               <!-- Blog Post End -->
 
               <!-- Blog Post Start -->
               <div class="col-md-12 blog-post">
                 <div class="post-title">
-                  <a href="single.html"
-                    ><h1>
+                  <a href="single.html">
+                    <h1>
                       What mistakes every beginner make, when they make website
                       using bootstrap?
-                    </h1></a
-                  >
+                    </h1>
+                  </a>
                 </div>
                 <div class="post-info">
-                  <span
-                    >November 23, 2016 / by
-                    <a href="#" target="_blank">Alex Parker</a></span
-                  >
+                  <span>November 23, 2016 / by
+                    <a href="#" target="_blank">Alex Parker</a></span>
                 </div>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -290,21 +244,13 @@
                   ipsum dolor sit amet, consectetur adipisicing elit. Molestiae
                   ut ratione similique.
                 </p>
-                <a
-                  href="single.html"
-                  class="button button-style button-anim fa fa-long-arrow-right"
-                  ><span>Read More</span></a
-                >
+                <a href="single.html" class="button button-style button-anim fa fa-long-arrow-right"><span>Read
+                    More</span></a>
               </div>
               <!-- Blog Post End -->
 
               <div class="col-md-12 text-center">
-                <a
-                  href="javascript:void(0)"
-                  id="load-more-post"
-                  class="load-more-button"
-                  >Load</a
-                >
+                <a href="javascript:void(0)" id="load-more-post" class="load-more-button">Load</a>
                 <div id="post-end-message"></div>
               </div>
             </div>
@@ -312,18 +258,10 @@
 
           <!-- Subscribe Form Start -->
           <div class="col-md-8 col-md-offset-2">
-            <form
-              id="mc-form"
-              method="post"
-              action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7"
-            >
+            <form id="mc-form" method="post"
+              action="http://uipasta.us14.list-manage.com/subscribe/post?u=854825d502cdc101233c08a21&amp;id=86e84d44b7">
               <div class="subscribe-form margin-top-20">
-                <input
-                  id="mc-email"
-                  type="email"
-                  placeholder="Email Address"
-                  class="text-input"
-                />
+                <input id="mc-email" type="email" placeholder="Email Address" class="text-input" />
                 <button class="submit-btn" type="submit">Submit</button>
               </div>
               <p>Subscribe to my weekly newsletter</p>
